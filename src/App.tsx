@@ -124,7 +124,9 @@ const App: React.FC = () => {
                 </button>
               </>
             ) : (
-              <div onClick={() => toggleTodo(todo.id)}>{todo.title}</div>
+              <div>
+                <div onClick={() => toggleTodo(todo.id)}>{todo.title} </div>
+              </div>
             )}
             <div>
               <button
