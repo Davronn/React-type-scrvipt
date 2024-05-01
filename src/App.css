@@ -16,6 +16,11 @@ h1{
 input{
   width: 450px;
   padding: 8px;
+  border-radius: 10px;
+  border: none;
+}
+input:focus{
+  outline: none;
 }
 
 .add{
