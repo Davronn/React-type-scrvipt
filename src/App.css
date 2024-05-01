@@ -1,42 +1,76 @@
-#root {
-  max-width: 1280px;
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 600px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  padding: 20px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+h1{
+  font-size: 50px;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+ 
+
+input{
+  width: 450px;
+  padding: 8px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.add{
+  padding: 8px;
+  margin-left: 50px;
+  color: white;
+  background-color: green;
+  border: none;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.edit{
+  padding: 8px;
+  margin-left: 10px;
+  color: white;
+  background-color: blue;
+  border: none;
+  cursor: pointer;
 }
 
-.card {
-  padding: 2em;
+.delete{
+  padding: 8px;
+  margin-left: 10px;
+  color: white;
+  background-color: red;
+  border: none;
+  cursor: pointer;
+}
+.todo-list {
+  list-style-type: none;
+  padding: 0;
 }
 
-.read-the-docs {
-  color: #888;
+.todo-item {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.todo-item input[type="text"] {
+  width: 300px;
+  margin-right: 10px;
+}
+
+.todo-item button {
+  margin-left: 10px;
+}
+
+.todo-item.completed {
+  text-decoration: line-through;
+}
+button{
+  border-radius: 5px;
+  border: 1px solid transparent;
 }
