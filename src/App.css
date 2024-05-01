@@ -78,4 +78,5 @@ input:focus{
 button{
   border-radius: 5px;
   border: 1px solid transparent;
+  font-size: medium;
 }
