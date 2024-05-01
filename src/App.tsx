@@ -16,14 +16,14 @@ const App: React.FC = () => {
 
   useEffect(() => {
     axios
-      .get<Todo[]>("http://localhost:3000/todos")
+      .get<Todo[]>("http://localhost:5000/todos")
       .then((response) => setTodos(response.data));
   }, []);
 
   const addTodo = () => {
     if (newTodo.trim() !== "") {
       axios
-        .post<Todo>("http://localhost:3000/todos", {
+        .post<Todo>("http://localhost:5000/todos", {
           title: newTodo,
           completed: false,
         })
@@ -35,7 +35,7 @@ const App: React.FC = () => {
   };
 
   const deleteTodo = (id: number) => {
-    axios.delete(`http://localhost:3000/todos/${id}`).then(() => {
+    axios.delete(`http://localhost:5000/todos/${id}`).then(() => {
       setTodos(todos.filter((todo) => todo.id !== id));
     });
   };
@@ -53,7 +53,7 @@ const App: React.FC = () => {
 
     axios
       .put(
-        `http://localhost:3000/todos/${id}`,
+        `http://localhost:5000/todos/${id}`,
         updatedTodos.find((todo) => todo.id === id)
       )
       .then(() => {
@@ -80,7 +80,7 @@ const App: React.FC = () => {
 
       axios
         .put(
-          `http://localhost:3000/todos/${id}`,
+          `http://localhost:5000/todos/${id}`,
           updatedTodos.find((todo) => todo.id === id)
         )
         .then(() => {
