@@ -107,7 +107,6 @@ const App: React.FC = () => {
           <li
             className="todo-item"
             key={todo.id}
-            onClick={() => toggleTodo(todo.id)}
             style={{ textDecoration: todo.completed ? "line-through" : "none" }}
           >
             {editingTodoId === todo.id ? (
@@ -125,7 +124,7 @@ const App: React.FC = () => {
                 </button>
               </>
             ) : (
-              <>{todo.title}</>
+              <div onClick={() => toggleTodo(todo.id)}>{todo.title}</div>
             )}
             <div>
               <button
